@@ -2,24 +2,213 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Mina & Mariam</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body style="font-family:Georgia;text-align:center;padding-top:100px;background:#f7f2ee;">
+<title>Mina & Mariam</title>
+
+<style>
+
+body{
+margin:0;
+background:#f7f2ee;
+font-family:Georgia,serif;
+color:#6b5f58;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+animation:fadeIn 2s ease;
+}
+
+.hero h1{
+font-size:70px;
+margin:0;
+animation:floatUp 2s ease;
+}
+
+.hero p{
+font-size:24px;
+}
+
+.section{
+padding:80px 25px;
+text-align:center;
+}
+
+.section h2{
+font-size:45px;
+margin-bottom:25px;
+}
+
+.message{
+max-width:700px;
+margin:auto;
+font-size:28px;
+line-height:1.8;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:20px;
+min-width:120px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.num{
+font-size:45px;
+font-weight:bold;
+}
+
+.label{
+font-size:16px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#6b5f58;
+color:white;
+text-decoration:none;
+border-radius:40px;
+}
+
+footer{
+padding:80px 20px;
+text-align:center;
+font-size:24px;
+}
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
+
+@keyframes floatUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div>
+
+<p>WE'RE ENGAGED</p>
 
 <h1>Mina & Mariam</h1>
 
-<p>We're Engaged 🤍</p>
-
-<p>11 September 2027</p>
-
-<p>7:00 PM</p>
-
 <p>
-The Gabriel Hotel<br>
-Sun City Mall<br>
-Sheraton, Cairo
+11 September 2027
 </p>
 
-</body>
-</html>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Our Story Begins</h2>
+
+<div class="message">
+
+With joyful hearts, we invite you to celebrate
+the beginning of a beautiful new chapter in our lives.
+
+Your presence will make our day even more special.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Countdown To Forever</h2>
+
+<div class="countdown">
+
+<div class="box">
+<div class="num" id="days"></div>
+<div class="label">DAYS</div>
+</div>
+
+<div class="box">
+<div class="num" id="hours"></div>
+<div class="label">HOURS</div>
+</div>
+
+<div class="box">
+<div class="num" id="minutes"></div>
+<div class="label">MINUTES</div>
+</div>
+
+<div class="box">
+<div class="num" id="seconds"></div>
+<div class="label">SECONDS</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Event Details</h2>
+
+<div class="message">
+
+7:00 PM
+
+<br><br>
+
+The Gabriel Hotel
+<br>
+Sun City Mall
+<br>
+Sheraton, Cairo
+
+</div>
+
+<a class="btn"
+href="httpsGabriel+Hotel+Sun+City+Mall+Sheraton"
+target="_blank">
+
+Open Location
+
+</a>
+
+</section>
+
+<footer>
+
+We can't wait to celebrate with you 🤍
+
+<br><br>
+
+Mina & Mariam
+
+</footer
