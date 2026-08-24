@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mina & Mariam</title>
 
-=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+orant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,167 +16,47 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Cormorant Garamond', serif;
-background:#e4d8ce;
+font-family:'Cormorant Garamond',serif;
+background:#f5efea;
 overflow-x:hidden;
 }
 
 #welcome{
 position:fixed;
 inset:0;
-background:#e4d8ce;
+background:#f5efea;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 z-index:9999;
-transition:1s;
 }
 
-.card{
-background:#f8f4f1;
-width:360px;
-padding:70px 30px;
-border-radius:20px;
-text-align:center;
-position:relative;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-}
-
-.circle{
-position:absolute;
-top:-35px;
-left:50%;
-transform:translateX(-50%);
-width:70px;
-height:70px;
-border-radius:50%;
-background:#8d776b;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:24px;
-color:white;
-}
-
-.card h1{
-font-size:55px;
-font-weight:400;
-line-height:1.2;
-color:#7b675d;
-}
-
-.card .date{
-margin-top:20px;
-font-size:20px;
-color:#9a8d85;
-}
-
-.card .quote{
-margin:25px 0;
-font-size:18px;
-color:#8f8179;
+.cover-photo{
+width:100%;
+height:85vh;
+object-fit:contain;
+background:#f5efea;
 }
 
 .open-btn{
+margin-top:20px;
+background:#7a695f;
+color:white;
 border:none;
-background:#8d776b;
-color:white;
-padding:14px 50px;
+padding:15px 60px;
 border-radius:40px;
-font-size:22px;
-cursor:pointer;
-}
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-url("cover.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero h1{
-font-size:75px;
-font-weight:400;
-}
-
-.hero p{
-font-size:28px;
-}
-
-.section{
-padding:90px 25px;
-text-align:center;
-background:#f8f4f1;
-}
-
-.title{
-font-size:48px;
-margin-bottom:25px;
-color:#7b675d;
-}
-
-.text{
-max-width:700px;
-margin:auto;
-font-size:28px;
-line-height:1.8;
-color:#7b675d;
-}
-
-.countdown{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:35px;
-}
-
-.box{
-background:white;
-padding:25px;
-min-width:120px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.num{
-font-size:42px;
-font-weight:bold;
-color:#7b675d;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#8d776b;
-color:white;
-border-radius:40px;
-text-decoration:none;
-}
-
-.floating-heart{
-position:fixed;
-pointer-events:none;
-color:#b89f8f;
-z-index:10000;
-animation:fly 2s forwards;
-}
-
-footer{
-padding:70px 20px;
-text-align:center;
 font-size:24px;
-background:#e4d8ce;
-color:#7b675d;
+cursor:pointer;
+font-family:'Cormorant Garamond',serif;
+}
+
+.heart{
+position:fixed;
+font-size:30px;
+pointer-events:none;
+animation:fly 2s forwards;
+z-index:10000;
 }
 
 @keyframes fly{
@@ -187,8 +66,102 @@ transform:translateY(0) scale(1);
 }
 100%{
 opacity:0;
-transform:translateY(-250px) scale(1.4);
+transform:translateY(-500px) scale(2);
 }
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url('cover.jpg');
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+background-color:#f5efea;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content h2{
+font-size:18px;
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+.hero-content h1{
+font-size:70px;
+font-weight:400;
+}
+
+.hero-content p{
+font-size:28px;
+margin-top:10px;
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:48px;
+color:#7a695f;
+margin-bottom:30px;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.box{
+background:white;
+border-radius:20px;
+padding:20px;
+min-width:120px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.num{
+font-size:42px;
+font-weight:bold;
+color:#7a695f;
+}
+
+.label{
+font-size:14px;
+letter-spacing:2px;
+}
+
+.details{
+font-size:30px;
+line-height:1.8;
+color:#7a695f;
+}
+
+.location-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#7a695f;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-size:22px;
+}
+
+footer{
+padding:70px 20px;
+text-align:center;
+font-size:28px;
+color:#7a695f;
 }
 
 </style>
@@ -198,41 +171,21 @@ transform:translateY(-250px) scale(1.4);
 
 <div id="welcome">
 
-<div class="card">
+<img src="cover.jpg" class="cover-photo">
 
-<div class="circle">🤍</div>
-
-<h1>
-Mina
-<br>
-&
-<br>
-Mariam
-</h1>
-
-<div class="date">
-September 11, 2027
-</div>
-
-<div class="quote">
-And so, our forever begins ✨
-</div>
-
-<button class="open-btn" onclick="openInvite()">
+<button class="open-btn" onclick="openInvitation()">
 Open
 </button>
 
 </div>
 
-</div>
-
-<div id="site" style="display:none;">
+<div id="invitation" style="display:none;">
 
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
-<p>WE'RE ENGAGED</p>
+<h2>THE ENGAGEMENT OF</h2>
 
 <h1>Mina & Mariam</h1>
 
@@ -244,47 +197,28 @@ Open
 
 <section class="section">
 
-<h2 class="title">
-A New Chapter Begins
-</h2>
-
-<div class="text">
-
-With joyful hearts, we invite you to celebrate
-the beginning of a beautiful new chapter in our lives.
-
-Your presence will make our day even more memorable.
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="title">
-Countdown To Forever
-</h2>
+<h2>Countdown To Forever</h2>
 
 <div class="countdown">
 
 <div class="box">
 <div class="num" id="days">0</div>
-<div>DAYS</div>
+<div class="label">DAYS</div>
 </div>
 
 <div class="box">
 <div class="num" id="hours">0</div>
-<div>HOURS</div>
+<div class="label">HOURS</div>
 </div>
 
 <div class="box">
 <div class="num" id="minutes">0</div>
-<div>MINUTES</div>
+<div class="label">MINUTES</div>
 </div>
 
 <div class="box">
 <div class="num" id="seconds">0</div>
-<div>SECONDS</div>
+<div class="label">SECONDS</div>
 </div>
 
 </div>
@@ -293,11 +227,9 @@ Countdown To Forever
 
 <section class="section">
 
-<h2 class="title">
-Event Details
-</h2>
+<h2>Event Details</h2>
 
-<div class="text">
+<div class="details">
 
 The Gabriel Hotel<br>
 Sun City Mall<br>
@@ -309,11 +241,9 @@ Sheraton, Cairo
 
 </div>
 
-://maps.app.goo.gl/UY46pTsuEk5c4hS58?g_st=ic"
+oo.gl/UY46pTsuEk5c4hS58?g_st=ic"
 target="_blank">
-
-View Location
-
+Open Location
 </a>
 
 </section>
@@ -332,19 +262,18 @@ Mina & Mariam
 
 <script>
 
-function openInvite(){
+function openInvitation(){
 
-for(let i=0;i<12;i++){
+for(let i=0;i<60;i++){
 
 let heart=document.createElement("div");
 
-heart.className="floating-heart";
+heart.className="heart";
 
 heart.innerHTML="❤";
 
 heart.style.left=Math.random()*100+"vw";
 heart.style.top=Math.random()*100+"vh";
-heart.style.fontSize=(18+Math.random()*20)+"px";
 
 document.body.appendChild(heart);
 
@@ -356,43 +285,13 @@ heart.remove();
 
 setTimeout(()=>{
 
-document.getElementById("welcome").style.opacity="0";
-
-},300);
-
-setTimeout(()=>{
-
 document.getElementById("welcome").style.display="none";
-document.getElementById("site").style.display="block";
+document.getElementById("invitation").style.display="block";
 
-},1200);
+window.scrollTo(0,0);
+
+},1500);
 
 }
 
-const target =
-new Date("September 11, 2027 19:00:00").getTime();
-
-setInterval(function(){
-
-const now = new Date().getTime();
-
-const diff = target - now;
-
-document.getElementById("days").innerHTML =
-Math.floor(diff/(1000*60*60*24));
-
-document.getElementById("hours").innerHTML =
-Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-
-document.getElementById("minutes").innerHTML =
-Math.floor((diff%(1000*60*60))/(1000*60));
-
-document.getElementById("seconds").innerHTML =
-Math.floor((diff%(1000*60))/1000);
-
-},1000);
-
-</script>
-
-</body>
-</html>
+const 
