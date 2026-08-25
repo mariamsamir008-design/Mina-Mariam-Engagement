@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mina & Mariam</title>
-
-.com">
-" crossorigin>
-
-ormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,13 +19,13 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Cormorant Garamond',serif;
 background:#f3eeea;
+font-family:Georgia, serif;
 color:#7c6d65;
 overflow-x:hidden;
 }
 
-/* Welcome */
+/* Welcome Screen */
 
 #welcome{
 position:fixed;
@@ -43,35 +41,39 @@ z-index:9999;
 width:380px;
 max-width:90%;
 background:#faf7f4;
-padding:50px 30px;
-border-radius:24px;
-text-align:center;
+padding:40px;
+border-radius:25px;
 box-shadow:0 20px 40px rgba(0,0,0,.12);
+text-align:center;
+}
+
+.small-title{
+letter-spacing:4px;
+font-size:13px;
+margin-bottom:25px;
 }
 
 .names{
-font-size:70px;
-font-weight:300;
-line-height:1.1;
-color:#89786f;
+font-size:55px;
+margin-bottom:20px;
 }
 
 .date{
-font-size:28px;
-margin-top:15px;
+font-size:22px;
+margin-bottom:15px;
 }
 
 .quote{
-font-size:20px;
-margin:20px 0 30px;
+font-size:18px;
+margin-bottom:25px;
 }
 
 .open-btn{
-border:none;
 background:#8d776b;
 color:white;
-padding:15px 50px;
-border-radius:50px;
+border:none;
+padding:14px 45px;
+border-radius:40px;
 font-size:22px;
 cursor:pointer;
 }
@@ -80,13 +82,14 @@ cursor:pointer;
 
 .heart{
 position:fixed;
+color:#b99d8d;
 pointer-events:none;
-color:#b89f8f;
-animation:fly 1.8s linear forwards;
+animation:fly 1.9s linear forwards;
 z-index:10000;
 }
 
 @keyframes fly{
+
 0%{
 opacity:1;
 transform:translateY(0);
@@ -96,7 +99,10 @@ transform:translateY(0);
 opacity:0;
 transform:translateY(-250px);
 }
+
 }
+
+/* Website */
 
 #website{
 display:none;
@@ -109,19 +115,12 @@ padding:70px 20px;
 text-align:center;
 }
 
-.hero h1{
-font-size:82px;
-font-weight:300;
-color:#89786f;
-margin-bottom:40px;
-}
-
 .polaroid{
-width:380px;
-max-width:90%;
-margin:auto;
+width:340px;
+max-width:100%;
 background:white;
-padding:14px;
+padding:12px;
+margin:auto;
 transform:rotate(-3deg);
 box-shadow:0 20px 40px rgba(0,0,0,.15);
 position:relative;
@@ -136,9 +135,9 @@ display:block;
 position:absolute;
 top:-12px;
 left:50%;
-transform:translateX(-50%) rotate(-4deg);
-width:95px;
-height:26px;
+transform:translateX(-50%) rotate(-5deg);
+width:90px;
+height:25px;
 background:#d7c1a7;
 }
 
@@ -150,83 +149,182 @@ text-align:center;
 }
 
 .section h2{
-font-size:48px;
-font-weight:400;
+font-size:42px;
 margin-bottom:20px;
-color:#89786f;
+font-weight:normal;
 }
 
 .section p{
-font-size:24px;
+font-size:22px;
 line-height:1.8;
 }
+
+/* Countdown */
 
 .countdown{
 display:flex;
 justify-content:center;
 gap:15px;
 flex-wrap:wrap;
-margin-top:25px;
+margin-top:30px;
 }
 
 .box{
 background:white;
 padding:20px;
-border-radius:18px;
-min-width:100px;
+min-width:90px;
+border-radius:15px;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 .num{
-font-size:36px;
-font-weight:600;
+font-size:32px;
+font-weight:bold;
 }
+
+/* Images */
 
 .calendar{
 width:100%;
 max-width:450px;
-border-radius:18px;
+border-radius:20px;
 box-shadow:0 15px 30px rgba(0,0,0,.12);
 }
+
+/* Buttons */
 
 .btn{
 display:inline-block;
 margin-top:25px;
 background:#8d776b;
 color:white;
-padding:15px 35px;
+padding:14px 35px;
 border-radius:40px;
 text-decoration:none;
+font-size:18px;
+}
+
+/* Info Cards */
+
+.info-card{
+max-width:600px;
+margin:25px auto 0;
+background:#faf7f4;
+padding:40px 25px;
+border-radius:25px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.info-card p{
+font-size:21px;
+line-height:1.8;
+}
+
+/* Wishes */
+
+.wishes-section{
+background:#ece2d9;
+}
+
+.wishes-section p{
+font-size:19px;
+}
+
+.wish-form{
+max-width:500px;
+margin:35px auto 0;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.wish-form input,
+.wish-form textarea{
+width:100%;
+border:none;
+border-radius:15px;
+padding:18px;
+font-family:Georgia, serif;
+font-size:17px;
+color:#7c6d65;
+outline:none;
+}
+
+.wish-form textarea{
+height:150px;
+resize:none;
+}
+
+.wish-form button{
+background:#8d776b;
+color:white;
+border:none;
+padding:16px;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
+}
+
+/* Wishes Display */
+
+.wishes-wall{
+max-width:500px;
+margin:30px auto;
+text-align:left;
+}
+
+.wish{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:18px;
+box-shadow:0 8px 18px rgba(0,0,0,.06);
+}
+
+.wish strong{
+display:block;
+margin-bottom:8px;
 }
 
 /* Footer */
 
 footer{
 padding:60px 20px;
-background:#ece2d9;
 text-align:center;
-font-size:24px;
+background:#faf7f4;
+font-size:20px;
 }
 
 </style>
+
 </head>
 
 <body>
 
+
+<!-- MUSIC -->
+
 <audio id="bgMusic" loop>
-" type="audio/mpeg">
+<source src="music.mp3" type="audio/mpeg">
 </audio>
+
+
+<!-- WELCOME SCREEN -->
 
 <div id="welcome">
 
 <div class="card">
+
+<div class="small-title">
+THE ENGAGEMENT OF
+</div>
 
 <div class="names">
 Mina & Mariam
 </div>
 
 <div class="date">
-September 11, 2027
+September 11, 2026
 </div>
 
 <div class="quote">
@@ -241,81 +339,214 @@ Open
 
 </div>
 
+
+<!-- WEBSITE -->
+
 <div id="website">
+
+
+<!-- HERO -->
 
 <section class="hero">
 
-<h1>
-Mina & Mariam
-</h1>
-
 <div class="polaroid">
 
-<img src="cover.jpg" alt="Cover Photo">
-
 <div class="tape"></div>
+
+<img src="cover.jpg" alt="Mina and Mariam">
 
 </div>
 
 </section>
 
+
+<!-- COUNTDOWN -->
+
 <section class="section">
 
-<h2>Countdown To Forever</h2>
+<h2>Countdown To Forever 🤍</h2>
 
 <div class="countdown">
 
 <div class="box">
+
 <div class="num" id="days">0</div>
+
 <div>DAYS</div>
+
 </div>
 
+
 <div class="box">
+
 <div class="num" id="hours">0</div>
+
 <div>HOURS</div>
+
 </div>
 
+
 <div class="box">
+
 <div class="num" id="minutes">0</div>
+
 <div>MINUTES</div>
+
 </div>
+
 
 <div class="box">
+
 <div class="num" id="seconds">0</div>
+
 <div>SECONDS</div>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- SAVE THE DATE -->
+
 <section class="section">
 
-<h2>Save The Date</h2>
+<h2>Save The Date ✨</h2>
 
-<img src="calendar.jpg" class="calendar" alt="Calendar">
+<img
+src="calendar.jpg"
+class="calendar"
+alt="Save the Date">
 
 </section>
 
+
+<!-- VENUE -->
+
 <section class="section">
 
-<h2>Engagement Party Venue</h2>
+<h2>Engagement Party Venue ✨</h2>
 
 <p>
+
 The Gabriel Hotel<br>
+
 Sun City Mall<br>
+
 Sheraton, Cairo
+
 <br><br>
-7:00 PM
+
+🕖 7:00 PM
+
 </p>
 
 <a
 class="btn"
-href="https://maps.app.get="_blank">
-Open Location
+href="https://maps.app.goo.gl/UY46pTsuEk5c4hS58?g_st=ic"
+target="_blank">
+
+📍 Open Location
+
 </a>
 
 </section>
+
+
+<!-- PLUS ONE -->
+
+<section class="section">
+
+<h2>Come With Your Favorite Person 🤍</h2>
+
+<div class="info-card">
+
+<p>
+
+🥂 Bring your +1 and let's celebrate together! 🥂
+
+<br><br>
+
+Couples are more than welcome 💍✨
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HEADS UP -->
+
+<section class="section">
+
+<h2>Just A Little Heads-Up 🤭✨</h2>
+
+<div class="info-card">
+
+<p>
+
+🔞 This is an adults-only celebration — 18+ only.
+
+<br><br>
+
+🥂 A 600 EGP minimum charge applies per person.
+
+<br><br>
+
+🤍 We can't wait to celebrate with you!
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- WISHES -->
+
+<section class="section wishes-section">
+
+<h2>Leave Us A Little Love 💌</h2>
+
+<p>
+
+Your sweet wishes would mean the world to us 🤍
+
+</p>
+
+<form class="wish-form" onsubmit="sendWish(event)">
+
+<input
+type="text"
+id="wishName"
+placeholder="Your name"
+required>
+
+<textarea
+id="wishMessage"
+placeholder="Leave us your wish..."
+required></textarea>
+
+<button type="submit">
+
+Send Your Wishes 💌
+
+</button>
+
+</form>
+
+<div
+class="wishes-wall"
+id="wishesWall">
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -327,75 +558,217 @@ Mina & Mariam
 
 </footer>
 
+
 </div>
+
 
 <script>
 
+
+/* OPEN INVITATION */
+
 function openInvite(){
-
-const music =
-document.getElementById("bgMusic");
-
-music.currentTime = 19;
-
-music.play();
 
 for(let i=0;i<10;i++){
 
-let heart =
-document.createElement("div");
+let heart=document.createElement("div");
 
 heart.className="heart";
+
 heart.innerHTML="❤";
 
 heart.style.left=Math.random()*100+"vw";
+
 heart.style.top=Math.random()*100+"vh";
+
 heart.style.fontSize=
 (20+Math.random()*15)+"px";
 
 document.body.appendChild(heart);
 
 setTimeout(()=>{
+
 heart.remove();
-},1800);
+
+},1900);
 
 }
+
+
+/* OPEN WEBSITE AFTER HEARTS */
 
 setTimeout(()=>{
 
-document.getElementById("welcome")
+document
+.getElementById("welcome")
 .style.display="none";
 
-document.getElementById("website")
+document
+.getElementById("website")
 .style.display="block";
 
-},1000);
+
+/* START MUSIC */
+
+const music =
+document.getElementById("bgMusic");
+
+music.volume=0.5;
+
+music.play()
+.catch(()=>{});
+
+
+},1900);
 
 }
 
+
+/* COUNTDOWN */
+
 const targetDate =
-new Date("September 11, 2027 19:00:00").getTime();
+new Date(
+"September 11, 2026 19:00:00"
+).getTime();
+
 
 setInterval(function(){
 
-const now = new Date().getTime();
-const distance = targetDate - now;
+const now =
+new Date().getTime();
 
-document.getElementById("days").innerHTML =
-Math.floor(distance/(1000*60*60*24));
+const distance =
+targetDate-now;
 
-document.getElementById("hours").innerHTML =
-Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 
-document.getElementById("minutes").innerHTML =
-Math.floor((distance%(1000*60*60))/(1000*60));
+/* If event has started */
 
-document.getElementById("seconds").innerHTML =
-Math.floor((distance%(1000*60))/1000);
+if(distance<=0){
+
+document
+.getElementById("days")
+.innerHTML=0;
+
+document
+.getElementById("hours")
+.innerHTML=0;
+
+document
+.getElementById("minutes")
+.innerHTML=0;
+
+document
+.getElementById("seconds")
+.innerHTML=0;
+
+return;
+
+}
+
+
+document
+.getElementById("days")
+.innerHTML=
+
+Math.floor(
+distance/(1000*60*60*24)
+);
+
+
+document
+.getElementById("hours")
+.innerHTML=
+
+Math.floor(
+(distance%(1000*60*60*24))
+/
+(1000*60*60)
+);
+
+
+document
+.getElementById("minutes")
+.innerHTML=
+
+Math.floor(
+(distance%(1000*60*60))
+/
+(1000*60)
+);
+
+
+document
+.getElementById("seconds")
+.innerHTML=
+
+Math.floor(
+(distance%(1000*60))
+/
+1000
+);
+
 
 },1000);
+
+
+/* WISHES BAR */
+
+function sendWish(event){
+
+event.preventDefault();
+
+const name =
+document
+.getElementById("wishName")
+.value;
+
+const message =
+document
+.getElementById("wishMessage")
+.value;
+
+
+const wishesWall =
+document
+.getElementById("wishesWall");
+
+
+const wish =
+document.createElement("div");
+
+wish.className="wish";
+
+
+wish.innerHTML=
+
+"<strong>💌 "+name+
+"</strong>"+
+
+message;
+
+
+wishesWall
+.prepend(wish);
+
+
+document
+.getElementById("wishName")
+.value="";
+
+
+document
+.getElementById("wishMessage")
+.value="";
+
+
+alert(
+"Thank you for your sweet wish 🤍"
+);
+
+}
 
 </script>
 
 </body>
+
 </html>
