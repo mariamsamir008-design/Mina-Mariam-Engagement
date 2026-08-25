@@ -302,7 +302,18 @@ text-align:center;
 background:#faf7f4;
 font-size:20px;
 }
+.section,
+.polaroid,
+.calendar{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
 
+.show{
+opacity:1;
+transform:translateY(0);
+}
 </style>
 
 </head>
@@ -776,6 +787,32 @@ alert(
 );
 
 }
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document
+.querySelectorAll(
+".section,.polaroid,.calendar,.info-card"
+)
+.forEach((el)=>{
+
+observer.observe(el);
+
+});
+
 
 </script>
 
