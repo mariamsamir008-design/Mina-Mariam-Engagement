@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mina & Mariam</title>
 
-<link href="https://fonts.+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Mina & Mariam</title>
 
 <style>
 
@@ -16,66 +15,137 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Cormorant Garamond',serif;
-background:#f4efeb;
+background:#f3eeea;
+font-family:Georgia, serif;
 overflow-x:hidden;
 }
 
 #welcome{
-position:fixed;
-inset:0;
-background:#f4efeb;
+min-height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
-z-index:9999;
+padding:40px 20px;
+background:#f3eeea;
 }
 
-.cover{
+.card{
+width:380px;
+background:#faf7f4;
+border-radius:25px;
+padding:35px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+position:relative;
+}
+
+.small-title{
+letter-spacing:4px;
+font-size:14px;
+color:#7a6a62;
+margin-bottom:30px;
+}
+
+.names{
+font-size:60px;
+color:#85736a;
+margin-bottom:30px;
+font-weight:normal;
+}
+
+.polaroid{
 width:100%;
-height:85vh;
-object-fit:contain;
-background:#f4efeb;
+background:white;
+padding:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transform:rotate(-3deg);
+position:relative;
+}
+
+.polaroid img{
+width:100%;
+display:block;
+}
+
+.tape{
+position:absolute;
+width:90px;
+height:24px;
+background:#d6c2aa;
+top:-12px;
+left:50%;
+transform:translateX(-50%) rotate(-4deg);
+}
+
+.date{
+margin-top:35px;
+font-size:22px;
+color:#8c7d75;
+}
+
+.quote{
+margin-top:15px;
+font-size:18px;
+color:#8c7d75;
 }
 
 .open-btn{
-background:#7a6a60;
-color:white;
+margin-top:25px;
 border:none;
-padding:15px 60px;
-border-radius:40px;
-font-size:24px;
+background:#8c7d75;
+color:white;
+padding:15px 50px;
+border-radius:50px;
+font-size:22px;
 cursor:pointer;
-margin-top:15px;
 }
 
-.heart{
+.floating-heart{
 position:fixed;
-font-size:28px;
+font-size:22px;
 pointer-events:none;
-animation:fly 2s linear forwards;
-z-index:10000;
+color:#b59d8d;
+z-index:99999;
+animation:fly 1.8s forwards;
 }
 
 @keyframes fly{
 0%{
 opacity:1;
-transform:translateY(0) scale(1);
+transform:translateY(0);
 }
 100%{
 opacity:0;
-transform:translateY(-450px) scale(2);
+transform:translateY(-220px);
 }
+}
+
+#website{
+display:none;
 }
 
 .hero{
 height:100vh;
-background:url('cover.jpg');
-background-size:contain;
-background-repeat:no-repeat;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url("cover.jpg");
+background-size:cover;
 background-position:center;
-background-color:#f4efeb;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:normal;
+}
+
+.hero p{
+font-size:24px;
 }
 
 .section{
@@ -84,103 +154,140 @@ text-align:center;
 }
 
 .section h2{
-font-size:48px;
-color:#7a6a60;
-margin-bottom:30px;
+font-size:40px;
+margin-bottom:20px;
+color:#7f6f67;
+}
+
+.section p{
+font-size:22px;
+line-height:1.8;
+color:#7f6f67;
 }
 
 .countdown{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:15px;
 flex-wrap:wrap;
+margin-top:30px;
 }
 
 .box{
 background:white;
 padding:20px;
-border-radius:20px;
-min-width:120px;
+border-radius:18px;
+min-width:100px;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 .num{
-font-size:40px;
+font-size:35px;
 font-weight:bold;
-color:#7a6a60;
+color:#7f6f67;
 }
 
-.label{
-font-size:14px;
-letter-spacing:2px;
-}
-
-.details{
-font-size:28px;
-line-height:1.8;
-color:#7a6a60;
-}
-
-.btn{
+.location-btn{
 display:inline-block;
 margin-top:25px;
-padding:15px 35px;
-background:#7a6a60;
+background:#8c7d75;
 color:white;
+padding:15px 35px;
+border-radius:50px;
 text-decoration:none;
-border-radius:35px;
 }
 
-footer{
+.footer{
 padding:60px 20px;
 text-align:center;
-font-size:28px;
-color:#7a6a60;
+background:#ece3dc;
+color:#7f6f67;
 }
 
 </style>
 </head>
-
 <body>
 
 <div id="welcome">
 
-<img src="cover.jpg" class="cover">
+<div class="card">
 
-<button class="open-btn" onclick="openInvitation()">
-Open Invitation
+<div class="small-title">
+THE ENGAGEMENT OF
+</div>
+
+<div class="names">
+Mina & Mariam
+</div>
+
+<div class="polaroid">
+
+cover.jpg
+
+<div class="tape"></div>
+
+</div>
+
+<div class="date">
+September 11, 2027
+</div>
+
+<div class="quote">
+And so, our forever begins ✨
+</div>
+
+<button class="open-btn" onclick="openInvite()">
+Open
 </button>
 
 </div>
 
-<div id="main" style="display:none;">
+</div>
 
-<section class="hero"></section>
+<div id="website">
+
+<section class="hero">
+
+<div>
+
+<h1>
+Mina & Mariam
+</h1>
+
+<p>
+September 11, 2027
+</p>
+
+</div>
+
+</section>
 
 <section class="section">
 
-<h2>Countdown To Forever</h2>
+<h2>
+Countdown To Forever
+</h2>
 
 <div class="countdown">
 
 <div class="box">
 <div class="num" id="days">0</div>
-<div class="label">DAYS</div>
+<div>DAYS</div>
 </div>
 
 <div class="box">
 <div class="num" id="hours">0</div>
-<div class="label">HOURS</div>
+<div>HOURS</div>
 </div>
 
 <div class="box">
 <div class="num" id="minutes">0</div>
-<div class="label">MINUTES</div>
+<div>MINUTES</div>
 </div>
 
 <div class="box">
 <div class="num" id="seconds">0</div>
-<div class="label">SECONDS</div>
+<div>SECONDS</div>
 </div>
 
 </div>
@@ -189,23 +296,15 @@ Open Invitation
 
 <section class="section">
 
-<h2>Event Details</h2>
+<h2>Engagement Party Venue</h2>
 
-<div class="details">
-
+<p>
 The Gabriel Hotel<br>
 Sun City Mall<br>
 Sheraton, Cairo
+</p>
 
-<br><br>
-
-September 11, 2027<br>
-7:00 PM
-
-</div>
-
-<a
-class="btn"
+<a class="location-btn"
 href="https://maps.app.goo.gl/UY46pTsuEk5c4hS58?g_st=ic"
 target="_blank">
 Open Location
@@ -213,29 +312,25 @@ Open Location
 
 </section>
 
-<footer>
+<div class="footer">
 
-We cannot wait to celebrate with you 🤍
+We can't wait to celebrate with you 🤍
 
-<br><br>
-
-Mina & Mariam
-
-</footer>
+</div>
 
 </div>
 
 <script>
 
-function openInvitation(){
+function openInvite(){
 
-for(let i=0;i<60;i++){
+for(let i=0;i<12;i++){
 
 let heart=document.createElement("div");
 
-heart.className="heart";
+heart.className="floating-heart";
 
-heart.innerHTML="🤍";
+heart.innerHTML="❤";
 
 heart.style.left=Math.random()*100+"vw";
 heart.style.top=Math.random()*100+"vh";
@@ -244,19 +339,23 @@ document.body.appendChild(heart);
 
 setTimeout(()=>{
 heart.remove();
-},2000);
+},1800);
+
 }
 
 setTimeout(()=>{
 
 document.getElementById("welcome").style.display="none";
-document.getElementById("main").style.display="block";
+document.getElementById("website").style.display="block";
 
-},1500);
+window.scrollTo(0,0);
+
+},1200);
 
 }
 
-const targetDate = new Date("September 11, 2027 19:00:00").getTime();
+const targetDate =
+new Date("September 11, 2027 19:00:00").getTime();
 
 setInterval(function(){
 
