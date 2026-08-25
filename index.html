@@ -6,6 +6,11 @@
 
 <title>Mina & Mariam</title>
 
+.com">
+" crossorigin>
+
+ormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -16,13 +21,13 @@ scroll-behavior:smooth;
 }
 
 body{
+font-family:'Cormorant Garamond',serif;
 background:#f3eeea;
-font-family:Georgia, serif;
 color:#7c6d65;
 overflow-x:hidden;
 }
 
-/* Welcome Screen */
+/* Welcome */
 
 #welcome{
 position:fixed;
@@ -36,40 +41,37 @@ z-index:9999;
 
 .card{
 width:380px;
+max-width:90%;
 background:#faf7f4;
-padding:40px;
-border-radius:25px;
-box-shadow:0 20px 40px rgba(0,0,0,.12);
+padding:50px 30px;
+border-radius:24px;
 text-align:center;
-}
-
-.small-title{
-letter-spacing:4px;
-font-size:13px;
-margin-bottom:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
 .names{
-font-size:55px;
-margin-bottom:20px;
+font-size:70px;
+font-weight:300;
+line-height:1.1;
+color:#89786f;
 }
 
 .date{
-font-size:22px;
-margin-bottom:15px;
+font-size:28px;
+margin-top:15px;
 }
 
 .quote{
-font-size:18px;
-margin-bottom:25px;
+font-size:20px;
+margin:20px 0 30px;
 }
 
 .open-btn{
+border:none;
 background:#8d776b;
 color:white;
-border:none;
-padding:14px 45px;
-border-radius:40px;
+padding:15px 50px;
+border-radius:50px;
 font-size:22px;
 cursor:pointer;
 }
@@ -78,8 +80,8 @@ cursor:pointer;
 
 .heart{
 position:fixed;
-color:#b99d8d;
 pointer-events:none;
+color:#b89f8f;
 animation:fly 1.8s linear forwards;
 z-index:10000;
 }
@@ -96,8 +98,6 @@ transform:translateY(-250px);
 }
 }
 
-/* Website */
-
 #website{
 display:none;
 }
@@ -109,23 +109,19 @@ padding:70px 20px;
 text-align:center;
 }
 
-.hero-title{
-letter-spacing:4px;
-font-size:15px;
-margin-bottom:15px;
-}
-
 .hero h1{
-font-size:70px;
-font-weight:normal;
+font-size:82px;
+font-weight:300;
+color:#89786f;
 margin-bottom:40px;
 }
 
 .polaroid{
-width:340px;
-background:white;
-padding:12px;
+width:380px;
+max-width:90%;
 margin:auto;
+background:white;
+padding:14px;
 transform:rotate(-3deg);
 box-shadow:0 20px 40px rgba(0,0,0,.15);
 position:relative;
@@ -140,9 +136,9 @@ display:block;
 position:absolute;
 top:-12px;
 left:50%;
-transform:translateX(-50%) rotate(-5deg);
-width:90px;
-height:25px;
+transform:translateX(-50%) rotate(-4deg);
+width:95px;
+height:26px;
 background:#d7c1a7;
 }
 
@@ -154,8 +150,10 @@ text-align:center;
 }
 
 .section h2{
-font-size:42px;
+font-size:48px;
+font-weight:400;
 margin-bottom:20px;
+color:#89786f;
 }
 
 .section p{
@@ -163,46 +161,40 @@ font-size:24px;
 line-height:1.8;
 }
 
-/* Countdown */
-
 .countdown{
 display:flex;
 justify-content:center;
 gap:15px;
 flex-wrap:wrap;
-margin-top:30px;
+margin-top:25px;
 }
 
 .box{
 background:white;
 padding:20px;
-min-width:90px;
-border-radius:15px;
+border-radius:18px;
+min-width:100px;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 .num{
-font-size:32px;
-font-weight:bold;
+font-size:36px;
+font-weight:600;
 }
-
-/* Images */
 
 .calendar{
 width:100%;
 max-width:450px;
-border-radius:20px;
+border-radius:18px;
 box-shadow:0 15px 30px rgba(0,0,0,.12);
 }
-
-/* Buttons */
 
 .btn{
 display:inline-block;
 margin-top:25px;
 background:#8d776b;
 color:white;
-padding:14px 35px;
+padding:15px 35px;
 border-radius:40px;
 text-decoration:none;
 }
@@ -211,8 +203,9 @@ text-decoration:none;
 
 footer{
 padding:60px 20px;
-text-align:center;
 background:#ece2d9;
+text-align:center;
+font-size:24px;
 }
 
 </style>
@@ -220,20 +213,20 @@ background:#ece2d9;
 
 <body>
 
+<audio id="bgMusic" loop>
+" type="audio/mpeg">
+</audio>
+
 <div id="welcome">
 
 <div class="card">
-
-<div class="small-title">
-THE ENGAGEMENT OF
-</div>
 
 <div class="names">
 Mina & Mariam
 </div>
 
 <div class="date">
-September 11, 2026
+September 11, 2027
 </div>
 
 <div class="quote">
@@ -252,17 +245,15 @@ Open
 
 <section class="hero">
 
-<div class="hero-title">
-THE ENGAGEMENT OF
-</div>
-
-<h1>Mina & Mariam</h1>
+<h1>
+Mina & Mariam
+</h1>
 
 <div class="polaroid">
 
-<div class="tape"></div>
+<img src="cover.jpg" alt="Cover Photo">
 
-<img src="cover.jpg" alt="Mina & Mariam">
+<div class="tape"></div>
 
 </div>
 
@@ -302,7 +293,7 @@ THE ENGAGEMENT OF
 
 <h2>Save The Date</h2>
 
-<img src="calendar.jpg" class="calendar" alt="Save the Date">
+<img src="calendar.jpg" class="calendar" alt="Calendar">
 
 </section>
 
@@ -311,24 +302,17 @@ THE ENGAGEMENT OF
 <h2>Engagement Party Venue</h2>
 
 <p>
-
 The Gabriel Hotel<br>
 Sun City Mall<br>
 Sheraton, Cairo
-
 <br><br>
-
 7:00 PM
-
 </p>
 
 <a
 class="btn"
-href="https://maps.app.goo.gl/UY46pTsuEk5c4hS58?g_st=ic"
-target="_blank">
-
+href="https://maps.app.get="_blank">
 Open Location
-
 </a>
 
 </section>
@@ -349,17 +333,25 @@ Mina & Mariam
 
 function openInvite(){
 
+const music =
+document.getElementById("bgMusic");
+
+music.currentTime = 19;
+
+music.play();
+
 for(let i=0;i<10;i++){
 
-let heart=document.createElement("div");
+let heart =
+document.createElement("div");
 
 heart.className="heart";
-
 heart.innerHTML="❤";
 
 heart.style.left=Math.random()*100+"vw";
 heart.style.top=Math.random()*100+"vh";
-heart.style.fontSize=(20+Math.random()*15)+"px";
+heart.style.fontSize=
+(20+Math.random()*15)+"px";
 
 document.body.appendChild(heart);
 
@@ -371,15 +363,18 @@ heart.remove();
 
 setTimeout(()=>{
 
-document.getElementById("welcome").style.display="none";
-document.getElementById("website").style.display="block";
+document.getElementById("welcome")
+.style.display="none";
+
+document.getElementById("website")
+.style.display="block";
 
 },1000);
 
 }
 
 const targetDate =
-new Date("September 11, 2026 19:00:00").getTime();
+new Date("September 11, 2027 19:00:00").getTime();
 
 setInterval(function(){
 
