@@ -12,53 +12,121 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 background:#f3eeea;
 font-family:Georgia, serif;
+color:#7c6d65;
 overflow-x:hidden;
 }
 
+/* Welcome Screen */
+
 #welcome{
-min-height:100vh;
+position:fixed;
+inset:0;
+background:#ece2d9;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:40px 20px;
-background:#f3eeea;
+z-index:9999;
 }
 
 .card{
 width:380px;
 background:#faf7f4;
+padding:40px;
 border-radius:25px;
-padding:35px;
+box-shadow:0 20px 40px rgba(0,0,0,.12);
 text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-position:relative;
 }
 
 .small-title{
 letter-spacing:4px;
-font-size:14px;
-color:#7a6a62;
-margin-bottom:30px;
+font-size:13px;
+margin-bottom:25px;
 }
 
 .names{
-font-size:60px;
-color:#85736a;
-margin-bottom:30px;
+font-size:55px;
+margin-bottom:20px;
+}
+
+.date{
+font-size:22px;
+margin-bottom:15px;
+}
+
+.quote{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.open-btn{
+background:#8d776b;
+color:white;
+border:none;
+padding:14px 45px;
+border-radius:40px;
+font-size:22px;
+cursor:pointer;
+}
+
+/* Hearts */
+
+.heart{
+position:fixed;
+color:#b99d8d;
+pointer-events:none;
+animation:fly 1.8s linear forwards;
+z-index:10000;
+}
+
+@keyframes fly{
+0%{
+opacity:1;
+transform:translateY(0);
+}
+100%{
+opacity:0;
+transform:translateY(-250px);
+}
+}
+
+/* Website */
+
+#website{
+display:none;
+}
+
+/* Hero */
+
+.hero{
+padding:70px 20px;
+text-align:center;
+}
+
+.hero-title{
+letter-spacing:4px;
+font-size:15px;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:70px;
 font-weight:normal;
+margin-bottom:40px;
 }
 
 .polaroid{
-width:100%;
+width:340px;
 background:white;
 padding:12px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+margin:auto;
 transform:rotate(-3deg);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
 position:relative;
 }
 
@@ -69,84 +137,15 @@ display:block;
 
 .tape{
 position:absolute;
-width:90px;
-height:24px;
-background:#d6c2aa;
 top:-12px;
 left:50%;
-transform:translateX(-50%) rotate(-4deg);
+transform:translateX(-50%) rotate(-5deg);
+width:90px;
+height:25px;
+background:#d7c1a7;
 }
 
-.date{
-margin-top:35px;
-font-size:22px;
-color:#8c7d75;
-}
-
-.quote{
-margin-top:15px;
-font-size:18px;
-color:#8c7d75;
-}
-
-.open-btn{
-margin-top:25px;
-border:none;
-background:#8c7d75;
-color:white;
-padding:15px 50px;
-border-radius:50px;
-font-size:22px;
-cursor:pointer;
-}
-
-.floating-heart{
-position:fixed;
-font-size:22px;
-pointer-events:none;
-color:#b59d8d;
-z-index:99999;
-animation:fly 1.8s forwards;
-}
-
-@keyframes fly{
-0%{
-opacity:1;
-transform:translateY(0);
-}
-100%{
-opacity:0;
-transform:translateY(-220px);
-}
-}
-
-#website{
-display:none;
-}
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-url("cover.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero h1{
-font-size:72px;
-font-weight:normal;
-}
-
-.hero p{
-font-size:24px;
-}
+/* Sections */
 
 .section{
 padding:80px 20px;
@@ -154,16 +153,16 @@ text-align:center;
 }
 
 .section h2{
-font-size:40px;
+font-size:42px;
 margin-bottom:20px;
-color:#7f6f67;
 }
 
 .section p{
-font-size:22px;
+font-size:24px;
 line-height:1.8;
-color:#7f6f67;
 }
+
+/* Countdown */
 
 .countdown{
 display:flex;
@@ -176,36 +175,48 @@ margin-top:30px;
 .box{
 background:white;
 padding:20px;
-border-radius:18px;
-min-width:100px;
+min-width:90px;
+border-radius:15px;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 .num{
-font-size:35px;
+font-size:32px;
 font-weight:bold;
-color:#7f6f67;
 }
 
-.location-btn{
+/* Calendar */
+
+.calendar{
+width:100%;
+max-width:450px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+/* Buttons */
+
+.btn{
 display:inline-block;
 margin-top:25px;
-background:#8c7d75;
+background:#8d776b;
 color:white;
-padding:15px 35px;
-border-radius:50px;
+padding:14px 35px;
+border-radius:40px;
 text-decoration:none;
 }
 
-.footer{
+/* Footer */
+
+footer{
 padding:60px 20px;
 text-align:center;
-background:#ece3dc;
-color:#7f6f67;
+background:#ece2d9;
 }
 
 </style>
 </head>
+
 <body>
 
 <div id="welcome">
@@ -218,14 +229,6 @@ THE ENGAGEMENT OF
 
 <div class="names">
 Mina & Mariam
-</div>
-
-<div class="polaroid">
-
-cover.jpg
-
-<div class="tape"></div>
-
 </div>
 
 <div class="date">
@@ -248,15 +251,15 @@ Open
 
 <section class="hero">
 
-<div>
+<div class="hero-title">
+THE ENGAGEMENT OF
+</div>
 
-<h1>
-Mina & Mariam
-</h1>
+<h1>Mina & Mariam</h1>
 
-<p>
-September 11, 2027
-</p>
+<div class="polaroid">
+
+<img src="cover.jpg" alt="Mina &iv>
 
 </div>
 
@@ -264,9 +267,7 @@ September 11, 2027
 
 <section class="section">
 
-<h2>
-Countdown To Forever
-</h2>
+<h2>Countdown To Forever</h2>
 
 <div class="countdown">
 
@@ -296,27 +297,48 @@ Countdown To Forever
 
 <section class="section">
 
+<h2>Save The Date</h2>
+
+calendar.jpg
+
+</section>
+
+<section class="section">
+
 <h2>Engagement Party Venue</h2>
 
 <p>
+
 The Gabriel Hotel<br>
 Sun City Mall<br>
 Sheraton, Cairo
+
+<br><br>
+
+7:00 PM
+
 </p>
 
-<a class="location-btn"
+<a
+class="btn"
 href="https://maps.app.goo.gl/UY46pTsuEk5c4hS58?g_st=ic"
 target="_blank">
+
 Open Location
+
 </a>
 
 </section>
 
-<div class="footer">
+<footer>
 
 We can't wait to celebrate with you 🤍
 
-</div>
+<br><br>
+
+Mina & Mariam
+
+</footer>
 
 </div>
 
@@ -324,16 +346,17 @@ We can't wait to celebrate with you 🤍
 
 function openInvite(){
 
-for(let i=0;i<12;i++){
+for(let i=0;i<10;i++){
 
 let heart=document.createElement("div");
 
-heart.className="floating-heart";
+heart.className="heart";
 
 heart.innerHTML="❤";
 
 heart.style.left=Math.random()*100+"vw";
 heart.style.top=Math.random()*100+"vh";
+heart.style.fontSize=(20+Math.random()*15)+"px";
 
 document.body.appendChild(heart);
 
@@ -348,9 +371,7 @@ setTimeout(()=>{
 document.getElementById("welcome").style.display="none";
 document.getElementById("website").style.display="block";
 
-window.scrollTo(0,0);
-
-},1200);
+},1000);
 
 }
 
@@ -380,3 +401,4 @@ Math.floor((distance%(1000*60))/1000);
 
 </body>
 </html>
+``
