@@ -5,293 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mina & Mariam</title>
 
-orant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:'Cormorant Garamond',serif;
-background:#f5efea;
-overflow-x:hidden;
+    margin:0;
+    background:#e4d8ce;
+    font-family:Georgia, serif;
+    text-align:center;
+    color:#6b5f58;
 }
 
-#welcome{
-position:fixed;
-inset:0;
-background:#f5efea;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:9999;
+.container{
+    padding:80px 20px;
 }
 
-.cover-photo{
-width:100%;
-height:85vh;
-object-fit:contain;
-background:#f5efea;
+.card{
+    max-width:700px;
+    margin:auto;
+    background:#f8f4f1;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
-.open-btn{
-margin-top:20px;
-background:#7a695f;
-color:white;
-border:none;
-padding:15px 60px;
-border-radius:40px;
-font-size:24px;
-cursor:pointer;
-font-family:'Cormorant Garamond',serif;
+h1{
+    font-size:60px;
 }
 
-.heart{
-position:fixed;
-font-size:30px;
-pointer-events:none;
-animation:fly 2s forwards;
-z-index:10000;
+p{
+    font-size:24px;
+    line-height:1.8;
 }
-
-@keyframes fly{
-0%{
-opacity:1;
-transform:translateY(0) scale(1);
-}
-100%{
-opacity:0;
-transform:translateY(-500px) scale(2);
-}
-}
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-url('cover.jpg');
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
-background-color:#f5efea;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero-content h2{
-font-size:18px;
-letter-spacing:4px;
-margin-bottom:20px;
-}
-
-.hero-content h1{
-font-size:70px;
-font-weight:400;
-}
-
-.hero-content p{
-font-size:28px;
-margin-top:10px;
-}
-
-.section{
-padding:80px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:48px;
-color:#7a695f;
-margin-bottom:30px;
-}
-
-.countdown{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.box{
-background:white;
-border-radius:20px;
-padding:20px;
-min-width:120px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.num{
-font-size:42px;
-font-weight:bold;
-color:#7a695f;
-}
-
-.label{
-font-size:14px;
-letter-spacing:2px;
-}
-
-.details{
-font-size:30px;
-line-height:1.8;
-color:#7a695f;
-}
-
-.location-btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 35px;
-background:#7a695f;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-size:22px;
-}
-
-footer{
-padding:70px 20px;
-text-align:center;
-font-size:28px;
-color:#7a695f;
-}
-
 </style>
 </head>
 
 <body>
 
-<div id="welcome">
+<div class="container">
 
-<img src="cover.jpg" class="cover-photo">
-
-<button class="open-btn" onclick="openInvitation()">
-Open
-</button>
-
-</div>
-
-<div id="invitation" style="display:none;">
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h2>THE ENGAGEMENT OF</h2>
+<div class="card">
 
 <h1>Mina & Mariam</h1>
 
+<p>We're Engaged 🤍</p>
+
 <p>September 11, 2027</p>
 
-</div>
+<p>7:00 PM</p>
 
-</section>
-
-<section class="section">
-
-<h2>Countdown To Forever</h2>
-
-<div class="countdown">
-
-<div class="box">
-<div class="num" id="days">0</div>
-<div class="label">DAYS</div>
-</div>
-
-<div class="box">
-<div class="num" id="hours">0</div>
-<div class="label">HOURS</div>
-</div>
-
-<div class="box">
-<div class="num" id="minutes">0</div>
-<div class="label">MINUTES</div>
-</div>
-
-<div class="box">
-<div class="num" id="seconds">0</div>
-<div class="label">SECONDS</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Event Details</h2>
-
-<div class="details">
-
+<p>
 The Gabriel Hotel<br>
 Sun City Mall<br>
 Sheraton, Cairo
+</p>
 
-<br><br>
-
-7:00 PM
-
-</div>
-
-oo.gl/UY46pTsuEk5c4hS58?g_st=ic"
-target="_blank">
+<p>
+<a href="https://maps.app.goo.gl/UY46pTsuEk5c4hS58?g_st=ic">
 Open Location
 </a>
-
-</section>
-
-<footer>
-
-We can't wait to celebrate with you 🤍
-
-<br><br>
-
-Mina & Mariam
-
-</footer>
+</p>
 
 </div>
 
-<script>
+</div>
 
-function openInvitation(){
-
-for(let i=0;i<60;i++){
-
-let heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤";
-
-heart.style.left=Math.random()*100+"vw";
-heart.style.top=Math.random()*100+"vh";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},2000);
-
-}
-
-setTimeout(()=>{
-
-document.getElementById("welcome").style.display="none";
-document.getElementById("invitation").style.display="block";
-
-window.scrollTo(0,0);
-
-},1500);
-
-}
-
-const 
+</body>
+</html>
