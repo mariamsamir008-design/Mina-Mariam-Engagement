@@ -89,6 +89,7 @@ z-index:10000;
 opacity:1;
 transform:translateY(0);
 }
+
 100%{
 opacity:0;
 transform:translateY(-250px);
@@ -185,7 +186,7 @@ font-size:32px;
 font-weight:bold;
 }
 
-/* Calendar */
+/* Images */
 
 .calendar{
 width:100%;
@@ -232,7 +233,7 @@ Mina & Mariam
 </div>
 
 <div class="date">
-September 11, 2027
+September 11, 2026
 </div>
 
 <div class="quote">
@@ -259,7 +260,9 @@ THE ENGAGEMENT OF
 
 <div class="polaroid">
 
-<img src="cover.jpg" alt="Mina &iv>
+<div class="tape"></div>
+
+<img src="cover.jpg" alt="Mina & Mariam">
 
 </div>
 
@@ -299,7 +302,7 @@ THE ENGAGEMENT OF
 
 <h2>Save The Date</h2>
 
-calendar.jpg
+<img src="calendar.jpg" class="calendar" alt="Save the Date">
 
 </section>
 
@@ -376,7 +379,7 @@ document.getElementById("website").style.display="block";
 }
 
 const targetDate =
-new Date("September 11, 2027 19:00:00").getTime();
+new Date("September 11, 2026 19:00:00").getTime();
 
 setInterval(function(){
 
@@ -401,4 +404,3 @@ Math.floor((distance%(1000*60))/1000);
 
 </body>
 </html>
-``
