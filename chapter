@@ -378,7 +378,7 @@ Open
 
 
 <!-- HERO -->
-
+  
 <section class="hero">
 
 <div class="polaroid">
@@ -389,62 +389,22 @@ Open
 
 </div>
 
-.save-date-slide{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:35px 20px;
-}
-
-.arc-container{
-width:100%;
-max-width:500px;
-margin-bottom:-35px;
-}
-
-.arc-text{
-width:100%;
-height:auto;
-}
-
-.arc-text text{
-fill:#7c6d65;
-font-family:Georgia, serif;
-font-size:27px;
-letter-spacing:1px;
-}
-
-.quote-sub{
-font-family:Georgia, serif;
-font-size:23px;
-line-height:1.6;
-text-align:center;
-margin:0 0 25px;
-color:#7c6d65;
-}
-
-.save-date-slide .calendar{
-width:100%;
-max-width:380px;
-border-radius:20px;
-}
 </section>
-
 
 <!-- SAVE THE DATE -->
 
 <section class="section">
 
-<h2>Save The Date </h2>
+<div class="straight-text">
+A beautiful chapter of our story begins,
+and we would be honored to celebrate it with you.
+</div>
 
 <img
 src="calendar.jpg"
 class="calendar"
 alt="Save the Date">
 
-  
 </section>
 
 <section class="section">
