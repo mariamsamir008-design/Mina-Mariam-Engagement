@@ -326,7 +326,7 @@ transform:translateY(0);
     color:#9a8e86;
     text-align:center;
 }
-    .scroll-text{
+.scroll-text{
 margin-top:5px;
 font-family:'Cormorant Garamond', serif;
 font-size:18px;
@@ -335,6 +335,21 @@ font-weight:300;
 color:#b09a8d;
 text-align:center;
 letter-spacing:2px;
+animation:blinkScroll 1.5s infinite;
+transition:opacity .5s ease;
+}
+    @keyframes blinkScroll{
+
+0%{
+opacity:1;
+}
+50%{
+opacity:.2;
+}      
+100%{
+opacity:1;
+}
+
 }
 .date-banner{
 display:flex;
