@@ -315,20 +315,14 @@ opacity:1;
 transform:translateY(0);
 }
 
-.special-message{
-font-size:42px;
-font-weight:400;
-max-width:850px;
-margin:auto;
-line-height:1.4;
+.straight-text{
+font-size:38px;
+max-width:800px;
+margin:0 auto 35px;
+line-height:1.5;
 color:#8d776b;
-}
-
-.special-date{
-margin-top:25px;
-font-size:28px;
-color:#b09a8d;
-line-height:1.8;
+text-align:center;
+font-family:'Cormorant Garamond', serif;
 }
 
 </style>
